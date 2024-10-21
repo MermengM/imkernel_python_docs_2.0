@@ -1,53 +1,45 @@
 ---
 sidebar_position: 1
-sidebar_label: Install
+sidebar_label: 安装
 ---
-# Install
+# 安装
+## 安装Imkernel
+### 从PyPi安装
 
-## Installing Imkernel
-### Install from PyPi
-
-Install IM Kernel Python SDK using pip:
-
+使用 pip 安装 IM Kernel Python SDK：  
+  
 ```
 pip install imkernel
 ```
+## imkernel 扩展工具包安装 
 
-## Installing imkernel extension toolkits
-
-In addition to basic modeling tools, imkernel integrates various toolkits based on a unified model to assist development.
-
-### Interactive Development Tool
-Integrates [JupyterLab](https://jupyter.org/) as an interactive development tool. Install as follows:
-
-```
+除了基本的建模工具外，imkernel集成了基于统一模型的各类工具包，辅助开发。
+### 交互式开发工具
+集成[JupyterLab](https://jupyter.org/)作为交互式开发工具，安装方式如下：
+```  
 pip install jupyterlab
-```
-
-To set JupyterLab to Chinese, an additional language pack needs to be installed:
-
-```
+```  
+JupyterLab设置中文需要安装额外语言包：
+```  
 pip install jupyterlab-language-pack-zh-CN
-```
+```  
+### 三维显示工具
 
-### 3D Visualization Tool
-
-3D visualization based on JupyterLab uses pyvista. The following packages need to be installed:
-
-```
+基于JupyterLab的三维展示采用pyvista，需安装如下包：  
+  
+```  
 pip install vtk trame ipywidgets 'pyvista[all,trame]' trame_jupyter_extension
-```
+```  
+### 几何核心扩展
+采用[pythonocc](https://anaconda.org/pythonocc/pythonocc-core)作为几何核心 ，安装pyocc (需通过Conda)
 
-### Geometry Core Extension
-Uses [pythonocc](https://anaconda.org/pythonocc/pythonocc-core) as the geometry core. Install pyocc (requires Conda):
-
-```
+```  
 conda install conda-forge::pythonocc-core
-```
-
-### Plotting Library Extension
-Provides some encapsulations of matplotlib. The following package needs to be installed:
-
-```
+```  
+  
+### 绘图库扩展
+提供了matplotlib的一些封装，需安装如下包：  
+  
+```  
 pip install matplotlib
-``` 
+```
