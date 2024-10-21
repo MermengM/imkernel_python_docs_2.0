@@ -1,0 +1,1 @@
+npm run start -- --port 54745 --host 0.0.0.0
