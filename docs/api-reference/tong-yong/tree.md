@@ -29,6 +29,7 @@ def tree_to_df(tree, index_num=None, columns_num=2, index_levels=None, columns=N
 ### 示例
 
 ```python
+import imkernel
 from treelib import Tree
 import pandas as pd
 
@@ -40,7 +41,7 @@ tree.create_node("Child2", "child2", parent="root")
 tree.create_node("Grandchild1", "grandchild1", parent="child1")
 
 # Convert tree to DataFrame
-df = tree_to_df(tree, index_num=2, columns_num=1)
+df = imkernel.tree_to_df(tree, index_num=2, columns_num=1)
 print(df)
 
 # Output:
@@ -70,29 +71,35 @@ def df_to_tree(df) -> treelib.Tree:
 ### 示例
 
 ```python
+import imkernel
 import pandas as pd
 from treelib import Tree
 
-# 创建一个示例 DataFrame
+# 创建数据字典
 data = {
-('Root', 'Child1'): ['Grandchild1'],
-('Root', 'Child2'): ['Child2']
+    ('Root', 'Child1'): ['Grandchild1'],
+    ('Root', 'Child2'): ['Grandchild2']
 }
+
+# 从字典创建 DataFrame
 df = pd.DataFrame.from_dict(data, orient='index', columns=['column_1'])
-df.index.names = ['level_1', 'level_2']
+
+# 设置索引名称
+df.index = pd.MultiIndex.from_tuples(df.index)
+df.index.names = ['level_0', 'level_1']
 
 # 将 DataFrame 转换为树结构
-tree = df_to_tree(df)
+tree = imkernel.df_to_tree(df)
 
 # 打印树结构
-tree.show()
+print(tree)
 
 # 输出:
 # Root
 # ├── Child1
-# │ └── Grandchild1
+# │   └── Grandchild1
 # └── Child2
-# └── Child2
+# └── Grandchild2
 ```
 
 ## create_tree
@@ -115,13 +122,14 @@ tree.show()
 ### 示例
 
 ```python
+import imkernel
 from treelib import Tree
 
 # 创建新树
 name = [["Child1"], ["Child2"]]
 subname = [["Grandchild1"], []]
-tree = create_tree("Root", name, subname)
-
+tree = imkernel.create_tree("Root", name, subname)
+print(tree)
 # 输出示例
 #  Root
 #  ├── Child1
@@ -131,7 +139,8 @@ tree = create_tree("Root", name, subname)
 # 合并到现有树
 new_name = [["Child3"]]
 new_subname = [["Grandchild2"]]
-merged_tree = create_tree("Root", new_name, new_subname, origin=tree)
+merged_tree = imkernel.create_tree("Root", new_name, new_subname, origin=tree)
+print(merged_tree)
 #  输出示例
 #  Root
 #  ├── Child1
