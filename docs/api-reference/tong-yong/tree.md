@@ -1,8 +1,7 @@
 ---
 id: tree
-title: 树方法
+title: 树
 ---
-# 参考
 
 ## tree_to_df
 
@@ -94,4 +93,50 @@ tree.show()
 # │ └── Grandchild1
 # └── Child2
 # └── Child2
+```
+
+## create_tree
+
+### 介绍
+
+构建或合并树结构的工具函数。该函数可以创建新树或在现有树的基础上添加/合并节点，支持最多三层的树结构构建。
+
+### 参数
+
+- `supname` (str): 根节点名称，作为树的一级节点
+- `name` (list of list of str): 二级节点的名称列表，每个子列表包含属于同一类的节点名称
+- `subname` (list of list of str, optional): 三级节点的名称列表，对应每个name节点的子节点，默认为None
+- `origin` (Tree, optional): 用于合并的现有树对象，默认为None
+
+### 返回值
+
+- Tree: 返回构建或合并后的树结构对象。如果origin为None或不包含supname则返回新树，否则返回修改后的origin树。
+
+### 示例
+
+```python
+from treelib import Tree
+
+# 创建新树
+name = [["Child1"], ["Child2"]]
+subname = [["Grandchild1"], []]
+tree = create_tree("Root", name, subname)
+
+# 输出示例
+#  Root
+#  ├── Child1
+#  │   └── Grandchild1
+#  └── Child2
+
+# 合并到现有树
+new_name = [["Child3"]]
+new_subname = [["Grandchild2"]]
+merged_tree = create_tree("Root", new_name, new_subname, origin=tree)
+#  输出示例
+#  Root
+#  ├── Child1
+#  │   └── Grandchild1
+#  ├── Child2
+#  └── Child3
+#      └── Grandchild2
 ```

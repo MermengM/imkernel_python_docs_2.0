@@ -85,7 +85,7 @@ const config = {
             type: 'docSidebar',
             sidebarId: 'tutorialSidebar',
             position: 'left',
-            label: 'Docs',
+            label: '文档',
           },
           {
             type: 'localeDropdown',
@@ -93,7 +93,7 @@ const config = {
           },
           // {to: '/blog', label: 'Blog', position: 'left'},
           {
-            href: 'https://github.com/MermengM/imkernel_python_docs',
+            href: 'https://github.com/MermengM/imkernel_python_docs_2.0',
             label: 'GitHub',
             position: 'right',
           },
@@ -106,8 +106,8 @@ const config = {
             title: 'Docs',
             items: [
               {
-                label: 'Tutorial',
-                to: '/docs/Introduction',
+                label: '文档',
+                to: '/docs/Install',
               },
             ],
           },
@@ -137,7 +137,7 @@ const config = {
               // },
               {
                 label: 'GitHub',
-                href: 'https://github.com/MermengM/imkernel_python_docs',
+                href: 'https://github.com/MermengM/imkernel_python_docs_2.0',
               },
             ],
           },
