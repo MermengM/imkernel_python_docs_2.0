@@ -99,7 +99,7 @@ print(tree)
 # ├── Child1
 # │   └── Grandchild1
 # └── Child2
-# └── Grandchild2
+#     └── Grandchild2
 ```
 
 ## create_tree
@@ -145,7 +145,6 @@ print(merged_tree)
 #  Root
 #  ├── Child1
 #  │   └── Grandchild1
-#  ├── Child2
-#  └── Child3
+#  └── Child2
 #      └── Grandchild2
 ```

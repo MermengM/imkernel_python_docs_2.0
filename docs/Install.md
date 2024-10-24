@@ -3,13 +3,17 @@ sidebar_position: 1
 sidebar_label: 安装
 ---
 # 安装
-## 安装Imkernel
+## 安装imkernel
 ### 从PyPi安装
 
 使用 pip 安装 IM Kernel Python SDK：  
   
 ```
 pip install imkernel
+```
+### 验证安装
+```
+import imkernel
 ```
 ## imkernel 扩展工具包安装 
 
@@ -28,7 +32,7 @@ pip install jupyterlab-language-pack-zh-CN
 基于JupyterLab的三维展示采用pyvista，需安装如下包：  
   
 ```  
-pip install vtk trame ipywidgets 'pyvista[all,trame]' trame_jupyter_extension
+pip install vtk trame ipywidgets pyvista[all,trame] trame_jupyter_extension
 ```  
 ### 几何核心扩展
 采用[pythonocc](https://anaconda.org/pythonocc/pythonocc-core)作为几何核心 ，安装pyocc (需通过Conda)
@@ -36,6 +40,7 @@ pip install vtk trame ipywidgets 'pyvista[all,trame]' trame_jupyter_extension
 ```  
 conda install conda-forge::pythonocc-core
 ```  
+
   
 ### 绘图库扩展
 提供了matplotlib的一些封装，需安装如下包：  
