@@ -32,6 +32,7 @@ const sidebars = {
           items: [
             // 'api-reference/tong-yong/index', //通用函数 主页
             'api-reference/tong-yong/tree',
+            'api-reference/tong-yong/dao',
           ],
         },{
           type: 'category',
