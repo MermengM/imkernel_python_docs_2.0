@@ -7,7 +7,7 @@ title: 三维显示
 ### 介绍
 
 一个用于显示CAD模型的函数。该函数可以在Jupyter环境中或普通Python环境中显示CAD模型，支持自定义颜色和边缘显示。
-
+> 目前支持.stl .obj 格式，step格式需要使用occ附加包进行解析
 ### 参数
 
 - `file_path` (str): CAD模型文件的路径

@@ -40,6 +40,7 @@ const sidebars = {
           items: [
             // 'api-reference/zhuan-yong/index', //通用函数 主页
             'api-reference/zhuan-yong/three-dimension',
+            'api-reference/zhuan-yong/pyocc',
           ],
         },
       ]
