@@ -39,6 +39,7 @@ const sidebars = {
           label: '专用函数',
           items: [
             // 'api-reference/zhuan-yong/index', //通用函数 主页
+            'api-reference/zhuan-yong/im-utils',
             'api-reference/zhuan-yong/three-dimension',
             'api-reference/zhuan-yong/pyocc',
           ],
