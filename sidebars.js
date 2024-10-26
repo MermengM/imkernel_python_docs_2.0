@@ -32,7 +32,7 @@ const sidebars = {
           items: [
             // 'api-reference/tong-yong/index', //通用函数 主页
             'api-reference/tong-yong/tree',
-            'api-reference/tong-yong/dao',
+            'api-reference/tong-yong/three-dimension',
           ],
         },{
           type: 'category',
@@ -40,8 +40,8 @@ const sidebars = {
           items: [
             // 'api-reference/zhuan-yong/index', //通用函数 主页
             'api-reference/zhuan-yong/im-utils',
-            'api-reference/zhuan-yong/three-dimension',
-            'api-reference/zhuan-yong/pyocc',
+            'api-reference/zhuan-yong/dao',
+            // 'api-reference/zhuan-yong/pyocc',
           ],
         },
       ]
