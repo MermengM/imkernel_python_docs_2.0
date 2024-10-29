@@ -75,10 +75,55 @@ tree = tree_ele(dimension, root_ele, ele, eleid, eleprop, elevar)
 # 生成的树结构可以转换为DataFrame
 df = tree_to_df(tree, index_num=2)
 ```
+## tree_method
 
-生成的树结构可以使用tree_to_df函数转换为DataFrame格式，支持自定义索引层数和列数。如果指定的索引层数超过树的实际层次将会报错。转换后的数据可以更直观地展示树的层级结构。
+### 介绍
+
+创建方法树,用于构建和管理一个包含方法、输入输出参数等层级结构的树形数据结构。该函数可以创建新树或向现有树中添加分支。
+
+### 参数
+
+- `method_name` (str): 方法名称
+- `root_sys` (str): 系统节点名称
+- `in_param` (list): 方法输入参数列表
+- `out_param` (list): 方法输出参数列表
+- `in_sub_param` (list, optional): 方法输入子参数列表,默认为None
+- `out_sub_param` (list, optional): 方法输出子参数列表,默认为None
+- `tree` (Tree, optional): 现有的树对象,不传入则创建新树,默认为None
+
+### 返回值
+
+- Tree: 返回构建好的方法树对象
+
+### 示例
+
+```python
+import treelib
+
+# 创建新的方法树
+tree = tree_method(
+method_name="calculate",
+root_sys="math",
+in_param=["num1", "num2"],
+out_param=["result"],
+in_sub_param=[["int", "float"], ["int", "float"]],
+out_sub_param=[["float"]]
+)
+
+# 向现有树添加新方法
+tree = tree_method(
+method_name="multiply",
+root_sys="math",
+in_param=["x", "y"],
+out_param=["product"],
+tree=tree
+)
+```
+
 ## combine_sys_ele
-
+```python
+def combine_sys_ele(system_tree, root_ele, person_tree=None, machine_tree=None, product_tree=None):
+```
 ### 介绍
 这是一个用于将多个单元树合并到系统树指定节点下的函数。它可以将人员、机器和产品三种类型的单元树分别合并到系统树的指定节点下。
 
