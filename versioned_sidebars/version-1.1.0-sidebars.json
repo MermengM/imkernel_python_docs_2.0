@@ -1,0 +1,28 @@
+{
+  "tutorialSidebar": [
+    "Install",
+    "Introduction",
+    {
+      "type": "category",
+      "label": "函数",
+      "items": [
+        {
+          "type": "category",
+          "label": "通用函数",
+          "items": [
+            "api-reference/tong-yong/tree",
+            "api-reference/tong-yong/three-dimension"
+          ]
+        },
+        {
+          "type": "category",
+          "label": "专用函数",
+          "items": [
+            "api-reference/zhuan-yong/im-utils",
+            "api-reference/zhuan-yong/dao"
+          ]
+        }
+      ]
+    }
+  ]
+}

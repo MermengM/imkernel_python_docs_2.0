@@ -91,6 +91,12 @@ const config = {
             type: 'localeDropdown',
             position: 'right',
           },
+          {
+            type: 'docsVersionDropdown', // 添加这个配置来显示版本选择器
+            position: 'right',
+            // dropdownItemsBefore: [],
+            // dropdownItemsAfter: [],
+          },
           // {to: '/blog', label: 'Blog', position: 'left'},
           {
             href: 'https://github.com/MermengM/imkernel_python_docs_2.0',
