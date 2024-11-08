@@ -40,6 +40,7 @@ const sidebars = {
           items: [
             // 'api-reference/zhuan-yong/index', //通用函数 主页
             'api-reference/zhuan-yong/im-utils',
+            'api-reference/zhuan-yong/im-search-tools',
             'api-reference/zhuan-yong/dao',
             // 'api-reference/zhuan-yong/pyocc',
           ],
